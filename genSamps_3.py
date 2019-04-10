@@ -14,7 +14,7 @@ def gen(prefix,totalToTake):
     count = 0
 
     for f in filesInSamps2:
-        if f == '.DS_Store':
+        if f in ['.DS_Store','.gitignore']:
             continue
         myImage = misc.imread('samps_2/'+f)
         if f[0] == prefix:
