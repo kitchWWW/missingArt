@@ -11,4 +11,9 @@
 +ProjectDescription = "Learning about Condor for using BERT in NLP Class with Porter"
 
 Executable = go.sh
- 
+
+Log = z_logs/z.log                                                   
+output = z_logs/outfile.txt
+error = z_logs/errors.txt
+
+Queue
