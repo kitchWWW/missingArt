@@ -1,0 +1,14 @@
+######################################### 
+# 
+# Example 4: Show off some fancy features 
+# and local predicates. 
+# 
+#########################################
+
++Group = "UNDER" 
++Project = "OTHER"
+
++ProjectDescription = "Learning about Condor for using BERT in NLP Class with Porter"
+
+Executable = go.sh
+ 
