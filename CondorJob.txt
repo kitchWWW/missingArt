@@ -10,8 +10,7 @@
 
 +ProjectDescription = "Learning about Condor for using BERT in NLP Class with Porter"
 
-Image_Size    = 16000000
-request_cpus = 8
+Image_Size    = 4481200
 
 Executable = go.sh
 

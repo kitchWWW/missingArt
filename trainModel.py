@@ -9,13 +9,13 @@ import genSamps_3 as gs
 
 HOW_MANY_TO_USE = 10000
 H1 = 5000
-H2 = 1000
-learning_rate = 1e-6
+H2 = 512
+learning_rate = 1e-7
 EPOCHS = 5000
 PRINT_EVERY = 5
 
 MODEL_PATH = 'myModelBiggest.pt'
-
+LOAD_MODEL_FROM = '/u/kitch/missingArt/out/1554920831.38/myModelBiggest.pt'
 
 outdir = 'out/'+str(time.time())+"/"
 
@@ -73,8 +73,7 @@ model = torch.nn.Sequential(
 )
 
 
-#model.load_state_dict(torch.load(MODEL_PATH))
-
+model.load_state_dict(torch.load(LOAD_MODEL_FROM))
 
 
 
@@ -105,7 +104,7 @@ for t in range(EPOCHS):
     # loss.
     loss = loss_fn(y_pred, y)
     print(t, loss.item())
-
+    os.system('echo "'+str(loss.item())+' '+str(t)+'" >> '+outdir+"z.log")
     # Zero the gradients before running the backward pass.
     model.zero_grad()
 
